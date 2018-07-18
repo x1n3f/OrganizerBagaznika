@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    interface ILuggage
+    interface IBox
     {
         // methods required to implement IComparable
         string ToString();

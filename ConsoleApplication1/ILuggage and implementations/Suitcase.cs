@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class Suitcase : ILuggage, IComparable
+    class Suitcase : IBox, IComparable
     {
         private int dimX = 0; // cm
         private int dimY = 0; // cm
@@ -45,8 +45,8 @@ namespace OrganizerBagaznika
 
         public override bool Equals(object otherLuggage)
         {
-            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is ILuggage;
-            bool volumesAreEqual = volume == ((ILuggage)otherLuggage).getVolume();
+            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is IBox;
+            bool volumesAreEqual = volume == ((IBox)otherLuggage).getVolume();
 
             bool areEqual = passedObjectNotEmptyAndProperType && volumesAreEqual;
 
@@ -84,10 +84,10 @@ namespace OrganizerBagaznika
             const int RESULT_THIS_IS_GREATER_AS_OTHER_LUGGAGE = 1;
             const int RESULT_THIS_IS_SMALLER_AS_OTHER_LUGGAGE = -1;
 
-            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is ILuggage;
+            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is IBox;
             bool volumesAreEqual = passedObjectNotEmptyAndProperType && Equals(otherLuggage);
-            bool thisIsGreaterAsOtherLuggage = passedObjectNotEmptyAndProperType && volume > ((ILuggage)otherLuggage).getVolume();
-            bool thisIsSmallerAsOtherLuggage = passedObjectNotEmptyAndProperType && volume < ((ILuggage)otherLuggage).getVolume();
+            bool thisIsGreaterAsOtherLuggage = passedObjectNotEmptyAndProperType && volume > ((IBox)otherLuggage).getVolume();
+            bool thisIsSmallerAsOtherLuggage = passedObjectNotEmptyAndProperType && volume < ((IBox)otherLuggage).getVolume();
 
             if (volumesAreEqual)
             {
