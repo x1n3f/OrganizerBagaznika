@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class Suitcase : ILuggage, IComparable
+    abstract class Box : IContainer, IComparable
     {
         private int dimX = 0; // cm
         private int dimY = 0; // cm
@@ -15,7 +15,7 @@ namespace OrganizerBagaznika
         private readonly int MINIMUM_LUGGAGE_DIMENSION = 10; // cm
         private readonly int MAXIMUM_LUGGAGE_DIMENSION = 100; // cm
 
-        public Suitcase()
+        public Box()
         {
             dimX = MINIMUM_LUGGAGE_DIMENSION;
             dimY = MINIMUM_LUGGAGE_DIMENSION;
@@ -23,9 +23,9 @@ namespace OrganizerBagaznika
             volume = calculateVolume();
         }
 
-        public Suitcase(int dimX, int dimY, int dimZ)
+        public Box(int dimX, int dimY, int dimZ)
         {
-            if(isLuggageValid(dimX, dimY, dimZ))
+            if (isBoxValid(dimX, dimY, dimZ))
             {
                 this.dimX = dimX;
                 this.dimY = dimY;
@@ -45,8 +45,8 @@ namespace OrganizerBagaznika
 
         public override bool Equals(object otherLuggage)
         {
-            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is ILuggage;
-            bool volumesAreEqual = volume == ((ILuggage)otherLuggage).getVolume();
+            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is IContainer;
+            bool volumesAreEqual = volume == ((IContainer)otherLuggage).getVolume();
 
             bool areEqual = passedObjectNotEmptyAndProperType && volumesAreEqual;
 
@@ -84,10 +84,10 @@ namespace OrganizerBagaznika
             const int RESULT_THIS_IS_GREATER_AS_OTHER_LUGGAGE = 1;
             const int RESULT_THIS_IS_SMALLER_AS_OTHER_LUGGAGE = -1;
 
-            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is ILuggage;
+            bool passedObjectNotEmptyAndProperType = otherLuggage != null && otherLuggage is IContainer;
             bool volumesAreEqual = passedObjectNotEmptyAndProperType && Equals(otherLuggage);
-            bool thisIsGreaterAsOtherLuggage = passedObjectNotEmptyAndProperType && volume > ((ILuggage)otherLuggage).getVolume();
-            bool thisIsSmallerAsOtherLuggage = passedObjectNotEmptyAndProperType && volume < ((ILuggage)otherLuggage).getVolume();
+            bool thisIsGreaterAsOtherLuggage = passedObjectNotEmptyAndProperType && volume > ((IContainer)otherLuggage).getVolume();
+            bool thisIsSmallerAsOtherLuggage = passedObjectNotEmptyAndProperType && volume < ((IContainer)otherLuggage).getVolume();
 
             if (volumesAreEqual)
             {
@@ -104,7 +104,7 @@ namespace OrganizerBagaznika
             else throw new ArgumentOutOfRangeException("Luggage volume compare failed");
         }
 
-        private bool isLuggageValid(int dimX, int dimY, int dimZ)
+        private bool isBoxValid(int dimX, int dimY, int dimZ)
         {
             bool dimXisOK = false;
             dimXisOK = checkDimenstionsConstrains(dimX);

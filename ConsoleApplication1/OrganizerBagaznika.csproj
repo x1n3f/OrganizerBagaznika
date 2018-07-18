@@ -43,20 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILuggage and implementations\ComparerLogic.cs" />
-    <Compile Include="ILuggage and implementations\LuggageCompareXYZ.cs" />
-    <Compile Include="ILuggage and implementations\LuggageCompareZ.cs" />
-    <Compile Include="ILuggage and implementations\LuggageCompareY.cs" />
-    <Compile Include="ILuggage and implementations\LuggageCompareX.cs" />
+    <Compile Include="IContainer and implementations\Box.cs" />
+    <Compile Include="IContainer and implementations\ComparerLogic.cs" />
+    <Compile Include="IContainer and implementations\LuggageCompareXYZ.cs" />
+    <Compile Include="IContainer and implementations\LuggageCompareZ.cs" />
+    <Compile Include="IContainer and implementations\LuggageCompareY.cs" />
+    <Compile Include="IContainer and implementations\LuggageCompareX.cs" />
     <Compile Include="LuggageCalc.cs" />
     <Compile Include="LuggageList.cs" />
-    <Compile Include="ILuggage and implementations\Suitcase.cs" />
-    <Compile Include="ILuggage and implementations\ILuggage.cs" />
+    <Compile Include="IContainer and implementations\Suitcase.cs" />
+    <Compile Include="IContainer and implementations\IContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IContainer and implementations\Trunk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="OrganizerBagaznikaDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

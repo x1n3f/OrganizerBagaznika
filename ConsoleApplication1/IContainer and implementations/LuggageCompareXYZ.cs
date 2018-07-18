@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class LuggageCompareMaxXYZ : IComparer<ILuggage>
+    class LuggageCompareMaxXYZ : IComparer<IContainer>
     {
-        public int Compare(ILuggage luggage_1, ILuggage luggage_2)
+        public int Compare(IContainer luggage_1, IContainer luggage_2)
         {
             int luggage_1_value = max(luggage_1.getX(), luggage_1.getY(), luggage_1.getZ());
             int luggage_2_value = max(luggage_2.getX(), luggage_2.getY(), luggage_2.getZ());
