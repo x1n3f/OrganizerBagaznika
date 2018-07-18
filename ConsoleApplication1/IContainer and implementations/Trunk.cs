@@ -14,6 +14,7 @@ namespace OrganizerBagaznika
 
         public Trunk(int dimX, int dimY, int dimZ) : base(dimX, dimY, dimZ)
         {
+            Console.WriteLine("New Trunk");
         }
     }
 }
