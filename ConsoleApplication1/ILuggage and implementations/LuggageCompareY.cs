@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class LuggageCompareY : IComparer<IBox>
+    class LuggageCompareY : IComparer<IContainer>
     {
-        public int Compare(IBox luggage_1, IBox luggage_2)
+        public int Compare(IContainer luggage_1, IContainer luggage_2)
         {
             int luggage_1_value = luggage_1.getY();
             int luggage_2_value = luggage_2.getY();

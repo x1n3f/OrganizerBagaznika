@@ -8,9 +8,9 @@ namespace OrganizerBagaznika
 {
     class LuggageList
     {
-        private List<IBox> luggageToBePackedIntoTrunk = new List<IBox>();
+        private List<IContainer> luggageToBePackedIntoTrunk = new List<IContainer>();
 
-        public void addLuggage(IBox luggage)
+        public void addLuggage(IContainer luggage)
         {
             luggageToBePackedIntoTrunk.Add(luggage);
         }
@@ -48,7 +48,7 @@ namespace OrganizerBagaznika
         public override string ToString()
         {
             string outputString = "";
-            foreach (IBox luggage in luggageToBePackedIntoTrunk)
+            foreach (IContainer luggage in luggageToBePackedIntoTrunk)
             {
                 outputString += luggage + "\n";
             }

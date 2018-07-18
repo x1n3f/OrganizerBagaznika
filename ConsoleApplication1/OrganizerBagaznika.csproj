@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IContainer.cs" />
     <Compile Include="ILuggage and implementations\ComparerLogic.cs" />
     <Compile Include="ILuggage and implementations\LuggageCompareXYZ.cs" />
     <Compile Include="ILuggage and implementations\LuggageCompareZ.cs" />
