@@ -15,11 +15,6 @@ namespace OrganizerBagaznika
             luggageToBePackedIntoTrunk.Add(luggage);
         }
 
-        public void getLuggage(int position)
-        {
-
-        }
-
         public void sortVolume()
         {
             luggageToBePackedIntoTrunk.Sort();
@@ -54,6 +49,23 @@ namespace OrganizerBagaznika
             }
 
             return outputString;
+        }
+
+        public int getLength()
+        {
+            return luggageToBePackedIntoTrunk.Count;
+        }
+
+        public IContainer getLuggage(int position)
+        {
+            if ((0 < position) && (position < luggageToBePackedIntoTrunk.Count))
+            {
+                return luggageToBePackedIntoTrunk[position];
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("Luggage index out of range");              
+            }
         }
     }
 }

@@ -27,6 +27,8 @@ namespace OrganizerBagaznika
             listaBagazy.addLuggage(new Suitcase(51, 99, 13));
             listaBagazy.addLuggage(new Suitcase(71, 18, 99));
 
+            LuggageCalc optymalizatorBagaznika = new LuggageCalc(listaBagazy, bagaznik);
+
             Console.WriteLine("Lista nieposortowana:");
             Console.WriteLine("******************************\n");
             Console.WriteLine(listaBagazy);
