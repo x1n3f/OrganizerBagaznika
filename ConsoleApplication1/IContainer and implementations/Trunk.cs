@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class Suitcase : Box
+    class Trunk : Box
     {
-        public Suitcase() : base()
+        public Trunk() : base()
         {
         }
 
-        public Suitcase(int dimX, int dimY, int dimZ) : base(dimX, dimY, dimZ)
+        public Trunk(int dimX, int dimY, int dimZ) : base(dimX, dimY, dimZ)
         {
         }
     }

@@ -13,6 +13,10 @@ namespace OrganizerBagaznika
             Console.WriteLine("Organizer bagaznika. Wesja 1.0");
             Console.WriteLine("******************************\n");
 
+            Trunk bagaznik = new Trunk(100, 50, 50);
+
+            Console.WriteLine("Bagaznik: {0}\n", bagaznik);
+
             LuggageList listaBagazy = new LuggageList();
             listaBagazy.addLuggage(new Suitcase(10, 50, 70));
             listaBagazy.addLuggage(new Suitcase(20, 30, 40));
