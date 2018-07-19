@@ -1,4 +1,6 @@
-﻿using System;
+﻿#undef DEBUG
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +28,7 @@ namespace OrganizerBagaznika
             TrunkSizeChecker checkTrunksSize = new TrunkSizeChecker(luggageList, trunk);
             isTrunkBigEnough = checkTrunksSize.evaluateTrunkSize();
 
-            Console.WriteLine("isTrunkBigEnough: {0}", isTrunkBigEnough);
+            DebugSupporter.printPropertyValue(nameof(isTrunkBigEnough), isTrunkBigEnough);          
         }
 
 

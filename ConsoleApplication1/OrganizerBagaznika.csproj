@@ -53,6 +53,7 @@
     <Compile Include="LuggageList.cs" />
     <Compile Include="Abstract level 3 - Luggage and trunk\Suitcase.cs" />
     <Compile Include="Abstract level 1 - IContainer\IContainer.cs" />
+    <Compile Include="Organizational classes\DebugSupporter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Abstract level 3 - Luggage and trunk\Trunk.cs" />

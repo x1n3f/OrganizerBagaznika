@@ -1,4 +1,6 @@
-﻿using System;
+﻿#undef DEBUG
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +29,8 @@ namespace OrganizerBagaznika
             bool volumeOK = checkSingleVolumeOfEveryLuggage() && checkSummaryVolume();
             bool dimXYZOK = checkXYZdimensions();
 
-            Console.WriteLine("Volume OK: {0}, XYZ OK: {1}", volumeOK, dimXYZOK);
+            string debugMessage = String.Format("Volume OK: {0}, XYZ OK: {1}", volumeOK, dimXYZOK);
+            DebugSupporter.printCustomMessage(debugMessage);
 
             return volumeOK && dimXYZOK;
         }
@@ -35,7 +38,10 @@ namespace OrganizerBagaznika
         private bool checkSingleVolumeOfEveryLuggage()
         {
             bool volumeIsEnough = true;
-            Console.WriteLine("Dlugosc listy bagazy w TrunkSizeChecker: {0}", luggageList.getLength());
+
+            string debugMessage = String.Format("Dlugosc listy bagazy w TrunkSizeChecker: {0}", luggageList.getLength());
+            DebugSupporter.printCustomMessage(debugMessage);
+
             for (int i = 0; i < luggageList.getLength(); i++)
             {
                 volumeIsEnough = volumeIsEnough & checkSingleVolume(luggageList.getLuggage(i));
@@ -51,7 +57,8 @@ namespace OrganizerBagaznika
                 isLuggageVolumeSmaller = true;
             }
 
-            Console.WriteLine("Luggage volume: {0}, Trunk volume: {1}, Evaluation: {2}", luggage.getVolume(), trunk.getVolume(), isLuggageVolumeSmaller);
+            string debugMessage = String.Format("Luggage volume: {0}, Trunk volume: {1}, Evaluation: {2}", luggage.getVolume(), trunk.getVolume(), isLuggageVolumeSmaller);
+            DebugSupporter.printCustomMessage(debugMessage);
 
             return isLuggageVolumeSmaller;
         }

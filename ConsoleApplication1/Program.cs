@@ -1,4 +1,6 @@
-﻿using System;
+﻿#undef DEBUG
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,8 @@ namespace OrganizerBagaznika
             listaBagazy.addLuggage(new Suitcase(24, 26, 26));
             listaBagazy.addLuggage(new Suitcase(24, 26, 26));
 
-            Console.WriteLine("Dlugosc listy bagazy w program: {0}", listaBagazy.getLength());
+            DebugSupporter.printPropertyValue(nameof(listaBagazy), listaBagazy);
+            DebugSupporter.printPropertyValue("listaBagazy.getLength()", listaBagazy.getLength());
 
             /*
                         listaBagazy.addLuggage(new Suitcase(10, 50, 70));
