@@ -8,8 +8,10 @@ namespace OrganizerBagaznika
 {
     class LuggageCalc
     {
-        private Trunk container = null;
-        private LuggageList content = null;
+        private Trunk trunk = null;
+        private LuggageList luggageList = null;
+        private bool isTrunkBigEnough = false;
+
 
         public LuggageCalc(LuggageList luggageList, IContainer trunk)
         {
@@ -18,38 +20,16 @@ namespace OrganizerBagaznika
                 throw new ArgumentNullException("Luggage list or trunk not existing");
             }
 
-            this.content = luggageList;
-            this.container = (Trunk) trunk;
+            this.luggageList = luggageList;
+            this.trunk = (Trunk) trunk;
+
+            TrunkSizeChecker checkTrunksSize = new TrunkSizeChecker(luggageList, trunk);
+            isTrunkBigEnough = checkTrunksSize.evaluateTrunkSize();
+
+            Console.WriteLine("isTrunkBigEnough: {0}", isTrunkBigEnough);
         }
 
-        private bool isTrunkBigEnough()
-        {
-            bool trunkIsBigEnough = true;
-            for(int i = 0; i < content.getLength(); i++)
-            {
-                trunkIsBigEnough = trunkIsBigEnough && doesLuggageFitToTrunk(content.getLuggage(i));
-            }
 
-            return trunkIsBigEnough;
-        }
 
-        private bool doesLuggageFitToTrunk(IContainer luggage)
-        {
-            bool luggageFitsToTrunk = false;
-
-            if (container.doesLuggageFitsToTrunk(luggage))
-            {
-                luggageFitsToTrunk = true;
-            }
-
-            return luggageFitsToTrunk;
-        }
-
-        private bool checkIfLuggageFitsToTrunk(IContainer luggage)
-        {
-
-            return false;
-        }
- 
     }
 }

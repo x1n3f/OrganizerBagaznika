@@ -58,13 +58,14 @@ namespace OrganizerBagaznika
 
         public IContainer getLuggage(int position)
         {
-            if ((0 < position) && (position < luggageToBePackedIntoTrunk.Count))
+            if ((0 <= position) && (position < luggageToBePackedIntoTrunk.Count()))
             {
                 return luggageToBePackedIntoTrunk[position];
             }
             else
             {
-                throw new IndexOutOfRangeException("Luggage index out of range");              
+                string message = String.Format("Luggage index out of range. Position: {0}, size {1}", position, luggageToBePackedIntoTrunk.Count());
+                throw new IndexOutOfRangeException(message);              
             }
         }
     }

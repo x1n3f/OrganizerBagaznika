@@ -17,7 +17,7 @@ namespace OrganizerBagaznika
             Console.WriteLine("New Trunk");
         }
 
-        public bool doesLuggageFitsToTrunk(IContainer luggage)
+        public bool checkXYZdimemsions(IContainer luggage)
         {
             int luggageDimX = luggage.getX();
             int luggageDimY = luggage.getY();
@@ -30,13 +30,13 @@ namespace OrganizerBagaznika
             }
 
             bool dimY_OK = false;
-            if (luggageDimX <= getY())
+            if (luggageDimY <= getY())
             {
                 dimY_OK = true;
             }
 
             bool dimZ_OK = false;
-            if (luggageDimY <= getZ())
+            if (luggageDimZ <= getZ())
             {
                 dimZ_OK = true;
             }
