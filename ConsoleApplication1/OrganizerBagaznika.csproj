@@ -43,19 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IContainer and implementations\Box.cs" />
-    <Compile Include="IContainer and implementations\ComparerLogic.cs" />
-    <Compile Include="IContainer and implementations\LuggageCompareXYZ.cs" />
-    <Compile Include="IContainer and implementations\LuggageCompareZ.cs" />
-    <Compile Include="IContainer and implementations\LuggageCompareY.cs" />
-    <Compile Include="IContainer and implementations\LuggageCompareX.cs" />
+    <Compile Include="Abstract level 2 - Box\Box.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\ComparerLogic.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareXYZ.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareZ.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareY.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareX.cs" />
     <Compile Include="LuggageCalc.cs" />
     <Compile Include="LuggageList.cs" />
-    <Compile Include="IContainer and implementations\Suitcase.cs" />
-    <Compile Include="IContainer and implementations\IContainer.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Suitcase.cs" />
+    <Compile Include="Abstract level 1 - IContainer\IContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IContainer and implementations\Trunk.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Trunk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

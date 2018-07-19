@@ -11,29 +11,38 @@ namespace OrganizerBagaznika
         private Trunk container = null;
         private LuggageList content = null;
 
-        public LuggageCalc(LuggageList content, IContainer container)
+        public LuggageCalc(LuggageList luggageList, IContainer trunk)
         {
-            if (content == null || container == null)
+            if (luggageList == null || trunk == null)
             {
-                throw new ArgumentNullException("Empty object");
+                throw new ArgumentNullException("Luggage list or trunk not existing");
             }
 
-            this.content = content;
-            this.container = (Trunk) container;
+            this.content = luggageList;
+            this.container = (Trunk) trunk;
         }
 
-        //TODO: zmienic, zeby kazdy bagaz sprawdzac pojedynczo + sumaryczna objetosc
         private bool isTrunkBigEnough()
         {
             bool trunkIsBigEnough = true;
-            bool oneLuggageFits = false;
             for(int i = 0; i < content.getLength(); i++)
             {
-                oneLuggageFits = container.doesLuggageFitsToTrunk(content.getLuggage(i));
-                trunkIsBigEnough = trunkIsBigEnough && oneLuggageFits;
+                trunkIsBigEnough = trunkIsBigEnough && doesLuggageFitToTrunk(content.getLuggage(i));
             }
 
             return trunkIsBigEnough;
+        }
+
+        private bool doesLuggageFitToTrunk(IContainer luggage)
+        {
+            bool luggageFitsToTrunk = false;
+
+            if (container.doesLuggageFitsToTrunk(luggage))
+            {
+                luggageFitsToTrunk = true;
+            }
+
+            return luggageFitsToTrunk;
         }
 
         private bool checkIfLuggageFitsToTrunk(IContainer luggage)
