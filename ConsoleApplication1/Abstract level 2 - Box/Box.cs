@@ -63,17 +63,17 @@ namespace OrganizerBagaznika
             return volume;
         }
 
-        public int getX()
+        public int getDimX()
         {
             return dimX;
         }
 
-        public int getY()
+        public int getDimY()
         {
             return dimY;
         }
 
-        public int getZ()
+        public int getDimZ()
         {
             return dimZ;
         }

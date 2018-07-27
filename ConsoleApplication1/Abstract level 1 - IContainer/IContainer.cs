@@ -15,8 +15,8 @@ namespace OrganizerBagaznika
         int CompareTo(object otherLuggage);
 
         int getVolume();
-        int getX();
-        int getY();
-        int getZ();
+        int getDimX();
+        int getDimY();
+        int getDimZ();
     }
 }

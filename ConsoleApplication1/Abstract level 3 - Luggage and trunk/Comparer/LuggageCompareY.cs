@@ -10,8 +10,8 @@ namespace OrganizerBagaznika
     {
         public int Compare(IContainer luggage_1, IContainer luggage_2)
         {
-            int luggage_1_value = luggage_1.getY();
-            int luggage_2_value = luggage_2.getY();
+            int luggage_1_value = luggage_1.getDimY();
+            int luggage_2_value = luggage_2.getDimY();
 
             ComparerLogic evaluateWhichIsBigger = new ComparerLogic(luggage_1_value, luggage_2_value);
             int result = evaluateWhichIsBigger.compare();

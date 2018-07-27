@@ -49,6 +49,9 @@
     <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareZ.cs" />
     <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareY.cs" />
     <Compile Include="Abstract level 3 - Luggage and trunk\Comparer\LuggageCompareX.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Positions\Cube.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Positions\Plane.cs" />
+    <Compile Include="Abstract level 3 - Luggage and trunk\Positions\Point.cs" />
     <Compile Include="LuggageCalc.cs" />
     <Compile Include="LuggageList.cs" />
     <Compile Include="Abstract level 3 - Luggage and trunk\Suitcase.cs" />

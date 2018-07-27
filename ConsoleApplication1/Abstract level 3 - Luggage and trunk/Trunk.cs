@@ -19,24 +19,24 @@ namespace OrganizerBagaznika
 
         public bool checkXYZdimemsions(IContainer luggage)
         {
-            int luggageDimX = luggage.getX();
-            int luggageDimY = luggage.getY();
-            int luggageDimZ = luggage.getZ();
+            int luggageDimX = luggage.getDimX();
+            int luggageDimY = luggage.getDimY();
+            int luggageDimZ = luggage.getDimZ();
 
             bool dimX_OK = false;
-            if (luggageDimX <= getX())
+            if (luggageDimX <= getDimX())
             {
                 dimX_OK = true;
             }
 
             bool dimY_OK = false;
-            if (luggageDimY <= getY())
+            if (luggageDimY <= getDimY())
             {
                 dimY_OK = true;
             }
 
             bool dimZ_OK = false;
-            if (luggageDimZ <= getZ())
+            if (luggageDimZ <= getDimZ())
             {
                 dimZ_OK = true;
             }
