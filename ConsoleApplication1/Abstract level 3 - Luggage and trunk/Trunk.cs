@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class Trunk : Box
+    sealed class Trunk : Box
     {
         public Trunk() : base()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrganizerBagaznika
 {
-    class Suitcase : Box
+    sealed class Suitcase : Box
     {
         private string friendlyName = "";
 
