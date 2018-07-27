@@ -1,42 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="OrganizerBagaznika.Box">
-    <Position X="8" Y="3.5" Width="3.25" />
+    <Position X="3.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>ACAAACAAsAAAIAQEgAAAAAAAAAAAAMAAAAgBAGADAAA=</HashCode>
-      <FileName>IContainer and implementations\Box.cs</FileName>
+      <HashCode>ACAAAAAAsAAAAAQEgAIAAAAAAgAAAMAAAAgBAGADAAA=</HashCode>
+      <FileName>Abstract level 2 - Box\Box.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="OrganizerBagaznika.Suitcase">
-    <Position X="4.5" Y="3.5" Width="1.5" />
+    <Position X="3.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IContainer and implementations\Suitcase.cs</FileName>
+      <FileName>Abstract level 3 - Luggage and trunk\Suitcase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OrganizerBagaznika.Trunk">
-    <Position X="4.5" Y="6" Width="1.5" />
+    <Position X="5.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IContainer and implementations\Trunk.cs</FileName>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Abstract level 3 - Luggage and trunk\Trunk.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OrganizerBagaznika.LuggageList">
-    <Position X="3.25" Y="0.5" Width="2.25" />
+    <Position X="11.5" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAgEAAAEAAAAAQACAAAAEAAACAAIAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAEAAgEAAAEAAAAAQACAAAAEAAACAAIAAA=</HashCode>
       <FileName>LuggageList.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="luggageToBePackedIntoTrunk" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Interface Name="OrganizerBagaznika.IContainer">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+  <Class Name="OrganizerBagaznika.TrunkSizeChecker" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAgAAAQAAAgAQCAAAQAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>TrunkSizeChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrganizerBagaznika.LuggageCalc">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>LuggageCalc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OrganizerBagaznika.IContainer" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQEgAAAAAAAAAAAAIAAAAgAAGABAAA=</HashCode>
-      <FileName>IContainer and implementations\IContainer.cs</FileName>
+      <FileName>Abstract level 1 - IContainer\IContainer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
